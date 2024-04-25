@@ -33,6 +33,8 @@ export default function Home({product}: HomeProps) {
   )
 }
 
+/* getStaticProps is used to pre-render pages, great for pages that doesn't change often*/
+
 export const getStaticProps: GetStaticProps = async () =>  {
   const price = await stripe.prices.retrieve("price_1M2Fb7L6OW7NcuK15lnUuxGo")
 
